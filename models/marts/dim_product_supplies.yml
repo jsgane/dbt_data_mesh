@@ -1,0 +1,40 @@
+models:
+  - name: dim_product_supplies
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: PRODUCT_ID
+        data_type: varchar
+        constraints:
+          - type: not_null          
+      - name: PRODUCT_NAME
+        data_type: varchar
+        constraints:
+          - type: not_null 
+      - name: PRODUCT_TYPE
+        data_type: varchar
+        constraints:
+          - type: not_null 
+      - name: PRODUCT_DESCRIPTION
+        data_type: varchar
+        constraints:
+          - type: not_null 
+      - name: PRODUCT_PRICE
+        data_type: NUMBER(38,6)
+        constraints:
+          - type: not_null 
+      - name: IS_FOOD_ITEM
+        data_type: BOOLEAN
+        constraints:
+          - type: not_null 
+      - name: IS_DRINK_ITEM
+        data_type: BOOLEAN
+        constraints:
+          - type: not_null 
+      - name: SUPPLY_COST
+        data_type: NUMBER(38,6)
+        constraints:
+          - type: not_null 
+
+      

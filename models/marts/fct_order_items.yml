@@ -1,0 +1,32 @@
+models:
+  - name: fct_order_items
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: ORDER_ITEM_ID
+        data_type: varchar
+        constraints:
+          - type: not_null
+      - name: ORDER_ID
+        data_type: varchar
+      - name: PRODUCT_ID
+        data_type: varchar
+      - name: LOCATION_ID
+        data_type: varchar
+      - name: CUSTOMER_ID
+        data_type: varchar
+      - name: ORDER_TOTAL
+        data_type: number
+      - name: TAX_PAID
+        data_type: number
+      - name: ORDERED_AT
+        data_type: timestamp_ntz
+      - name: CUSTOMER_NAME
+        data_type: varchar
+      - name: LOCATION_NAME
+        data_type: varchar
+      - name: TAX_RATE
+        data_type: number
+      - name: LOCATION_OPENED_AT
+        data_type: timestamp_ntz
