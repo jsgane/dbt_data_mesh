@@ -1,5 +1,6 @@
 models:
   - name: fct_orders
+    latest_version: 1
     config:
       contract:
         enforced: true
@@ -16,7 +17,7 @@ models:
         data_type: varchar
         #constraints:
         #  - type: not_null
-      - name: ORDER_TOTAL
+      - name: order_total
         data_type: number
         #constraints:
         #  - type: not_null
@@ -40,7 +41,7 @@ models:
         data_type: number
         #constraints:
         #  - type: not_null
-      - name: LOCATION_OPENED_AT
+      - name: location_opened_at
         data_type: TIMESTAMP_NTZ
         #constraints:
         #  - type: not_null
@@ -56,3 +57,15 @@ models:
         data_type: number
         #constraints:
         #  - type: not_null
+    versions:
+      - v: 1
+        config:
+          alias: fct_orders
+      - v: 2
+        columns:
+          - name: order_amount
+            data_type : number
+          - name: location_opened_at
+            data_type : date
+          - include: all
+            exclude: [order_total]
